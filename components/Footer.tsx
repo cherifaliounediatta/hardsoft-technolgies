@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { COMPANY } from '../constants';
-import { Facebook, Linkedin, Instagram, Fingerprint, MapPin, Phone, Mail, ArrowRight, Layout } from 'lucide-react';
+import { Facebook, Linkedin, Instagram, Fingerprint, MapPin, Phone, Mail, ArrowRight, Layout, Lock } from 'lucide-react';
 import { ViewState } from '../App';
 
 interface FooterProps {
@@ -31,10 +32,10 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
           <div>
             <h3 className="text-white text-sm font-bold uppercase tracking-wider mb-6 border-l-2 border-indigo-500 pl-3">Navigation</h3>
             <ul className="space-y-3 text-sm">
-              <li><button onClick={() => navigateTo('home')} aria-label="Retourner à la page d'accueil" className="group flex items-center gap-2 hover:text-indigo-400 transition-colors"><ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" /> Accueil</button></li>
-              <li><button onClick={() => navigateTo('templates')} aria-label="Découvrir nos modèles de sites" className="group flex items-center gap-2 hover:text-indigo-400 transition-colors"><ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" /> Modèles de Sites</button></li>
-              <li><a href="#services" aria-label="Consulter nos services et expertises" className="group flex items-center gap-2 hover:text-indigo-400 transition-colors"><ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" /> Expertises</a></li>
-              <li><button onClick={() => navigateTo('quote')} aria-label="Demander un devis personnalisé" className="group flex items-center gap-2 hover:text-indigo-400 transition-colors"><ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" /> Demander un Devis</button></li>
+              <li><button onClick={() => navigateTo('home')} className="group flex items-center gap-2 hover:text-indigo-400 transition-colors"><ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" /> Accueil</button></li>
+              <li><button onClick={() => navigateTo('blog')} className="group flex items-center gap-2 hover:text-indigo-400 transition-colors"><ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" /> Blog & Actualités</button></li>
+              <li><button onClick={() => navigateTo('templates')} className="group flex items-center gap-2 hover:text-indigo-400 transition-colors"><ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" /> Modèles de Sites</button></li>
+              <li><button onClick={() => navigateTo('quote')} className="group flex items-center gap-2 hover:text-indigo-400 transition-colors"><ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" /> Demander un Devis</button></li>
             </ul>
           </div>
 
@@ -52,13 +53,13 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
                     <div className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center border border-slate-800 group-hover:border-indigo-500/50 transition-colors flex-shrink-0">
                         <Phone className="w-4 h-4 text-indigo-500" />
                     </div>
-                    <a href={`tel:${COMPANY.phone}`} aria-label={`Appeler au ${COMPANY.phone}`} className="hover:text-indigo-400 transition-colors">{COMPANY.phone}</a>
+                    <a href={`tel:${COMPANY.phone}`} className="hover:text-indigo-400 transition-colors">{COMPANY.phone}</a>
                  </div>
                  <div className="flex items-center gap-3 text-sm group">
                     <div className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center border border-slate-800 group-hover:border-indigo-500/50 transition-colors flex-shrink-0">
                         <Mail className="w-4 h-4 text-indigo-500" />
                     </div>
-                    <a href={`mailto:${COMPANY.email}`} aria-label={`Envoyer un e-mail à ${COMPANY.email}`} className="hover:text-indigo-400 transition-colors">{COMPANY.email}</a>
+                    <a href={`mailto:${COMPANY.email}`} className="hover:text-indigo-400 transition-colors">{COMPANY.email}</a>
                  </div>
             </div>
           </div>
@@ -67,13 +68,13 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
           <div>
             <h3 className="text-white text-sm font-bold uppercase tracking-wider mb-6 border-l-2 border-indigo-500 pl-3">Restons Connectés</h3>
             <div className="flex space-x-4 mb-8">
-              <a href="#" aria-label="Suivez-nous sur Facebook" className="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
+              <a href="#" className="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-1">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" aria-label="Suivez-nous sur LinkedIn" className="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-600 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-1">
+              <a href="#" className="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-600 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-1">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" aria-label="Suivez-nous sur Instagram" className="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-pink-600 hover:border-pink-500 transition-all duration-300 transform hover:-translate-y-1">
+              <a href="#" className="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-pink-600 hover:border-pink-500 transition-all duration-300 transform hover:-translate-y-1">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -81,7 +82,6 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
             <div className="bg-gradient-to-r from-slate-900 to-slate-800 p-1 rounded-xl">
                 <button 
                     onClick={() => navigateTo('support')}
-                    aria-label="Accéder au centre de support client"
                     className="w-full px-4 py-3 rounded-lg bg-slate-950 text-sm font-medium hover:bg-slate-900 hover:text-indigo-400 transition-all flex items-center justify-center gap-2 border border-slate-800 group"
                 >
                     Accès Support Client
@@ -92,7 +92,7 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
 
           {/* Column 4: Brand & Portfolio (Right) */}
           <div className="lg:text-right flex flex-col items-start lg:items-end">
-             <div className="flex items-center gap-3 mb-6 cursor-pointer group" onClick={() => navigateTo('home')} role="button" aria-label="Retour au haut de page">
+             <div className="flex items-center gap-3 mb-6 cursor-pointer group" onClick={() => navigateTo('home')} role="button">
                 <div className="flex flex-col items-start lg:items-end">
                     <div className="font-bold text-2xl leading-none tracking-tight flex items-center">
                         <span className="text-indigo-500">Hard</span>
@@ -113,7 +113,6 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
 
             <button 
                 onClick={handlePortfolioClick}
-                aria-label="Consulter l'ensemble de notre portfolio"
                 className="group relative px-6 py-3 rounded-xl bg-indigo-600 text-white font-bold overflow-hidden transition-all shadow-lg hover:shadow-indigo-500/30 transform hover:-translate-y-1"
             >
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1s_infinite]"></div>
@@ -128,10 +127,16 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
 
         <div className="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400 font-medium">
             <p>&copy; {new Date().getFullYear()} HardSoft Technologies. Tous droits réservés.</p>
-            <div className="flex gap-6">
+            <div className="flex gap-6 items-center">
                 <a href="#" className="hover:text-indigo-400 transition-colors">Mentions Légales</a>
-                <a href="#" className="hover:text-indigo-400 transition-colors">Politique de Confidentialité</a>
-                <a href="#" className="hover:text-indigo-400 transition-colors">CGV</a>
+                <a href="#" className="hover:text-indigo-400 transition-colors">Confidentialité</a>
+                <button 
+                  onClick={() => navigateTo('admin-login')}
+                  className="flex items-center gap-1.5 px-2 py-1 rounded bg-white/5 border border-white/10 hover:bg-white/10 hover:border-indigo-500/50 transition-all text-slate-500 hover:text-indigo-400"
+                >
+                  <Lock className="w-3 h-3" />
+                  <span>Admin</span>
+                </button>
             </div>
         </div>
       </div>

@@ -1,9 +1,10 @@
+
 import React from 'react';
 
 const TOOLS = [
   {
     name: "n8n",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/f/f6/N8n-logo.png", // PNG is stable for n8n, SVG rare
+    logo: "https://upload.wikimedia.org/wikipedia/commons/f/f6/N8n-logo.png",
     type: "Automation"
   },
   {
@@ -58,49 +59,49 @@ const SECTORS = [
     id: 1,
     title: "Entreprises & PME",
     sub: "Gestion & Croissance",
-    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=500"
+    image: "https://images.unsplash.com/photo-1573166364524-d9dbfd8bbf83?auto=format&fit=crop&q=80&w=500"
   },
   {
     id: 2,
     title: "Restauration",
     sub: "Digitalisation Point de Vente",
-    image: "https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?auto=format&fit=crop&q=80&w=500"
+    image: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&q=80&w=500"
   },
   {
     id: 3,
     title: "Santé & Pharmacie",
     sub: "Solutions Médicales",
-    image: "https://images.unsplash.com/photo-1576091160550-217358c7e618?auto=format&fit=crop&q=80&w=500"
+    image: "https://images.unsplash.com/photo-1613919113166-737594959cc0?auto=format&fit=crop&q=80&w=500"
   },
   {
     id: 4,
     title: "E-commerce",
     sub: "Boutiques en Ligne",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&q=80&w=500"
+    image: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&q=80&w=500"
   },
   {
     id: 5,
     title: "Associations",
     sub: "Engagement Communautaire",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=500"
+    image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=80&w=500"
   },
   {
     id: 6,
     title: "BTP & Immobilier",
     sub: "Suivi de Chantiers",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=500"
+    image: "https://images.unsplash.com/photo-1541888941259-79d755b57aa8?auto=format&fit=crop&q=80&w=500"
   },
   {
     id: 7,
     title: "Logistique",
     sub: "Tracking & Flottes",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=500"
+    image: "https://images.unsplash.com/photo-1521791136064-7986c2959213?auto=format&fit=crop&q=80&w=500"
   },
   {
     id: 8,
     title: "Éducation",
     sub: "E-learning & Gestion",
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=500"
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=500"
   }
 ];
 

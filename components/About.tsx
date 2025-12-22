@@ -42,25 +42,25 @@ const TEAM_MEMBERS = [
     name: "Cherif Alioune Diatta",
     role: "Fondateur & CEO",
     bio: "Visionnaire passionné, il pilote la stratégie de HardSoft depuis 2017 avec une ambition : connecter l'Afrique par la technologie.",
-    image: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1507152832244-10d45c7eda57?auto=format&fit=crop&q=80&w=800",
   },
   {
     name: "Aïssatou Ndiaye",
     role: "Directrice Technique (CTO)",
-    bio: "Experte en architecture Cloud et cybersécurité, ancienne ingénieure chez Atos.",
+    bio: "Experte en architecture Cloud et cybersécurité, passionnée par l'innovation robuste.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800",
   },
   {
     name: "Moussa Fall",
     role: "Lead Développeur",
     bio: "Spécialiste Fullstack et Mobile (Flutter), passionné par l'UX et la performance.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?auto=format&fit=crop&q=80&w=800",
   },
   {
     name: "Aminata Sow",
     role: "Responsable Marketing",
     bio: "Stratège digitale focalisée sur la croissance des PME et l'identité de marque.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1531123897727-8f129e16fd3c?auto=format&fit=crop&q=80&w=800",
   }
 ];
 

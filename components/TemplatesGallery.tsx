@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { ViewState } from '../App';
 import { COMPANY } from '../constants';
@@ -12,7 +13,6 @@ interface TemplatesGalleryProps {
   navigateTo: (view: ViewState) => void;
 }
 
-// Icon component needed for specific usages not in lucide imports directly in template map
 const Ruler = ({ className }: { className?: string }) => (
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
@@ -30,9 +30,6 @@ const Ruler = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// Helper pour générer des images aléatoires stables si besoin, 
-// mais ici nous utiliserons des images Unsplash spécifiques pour la qualité.
-
 const TEMPLATES = [
   // --- ENTREPRISE (5 Modèles) ---
   {
@@ -42,7 +39,7 @@ const TEMPLATES = [
     icon: <Briefcase className="w-5 h-5" />,
     description: "Interface sombre et futuriste pour les startups technologiques.",
     features: ["SaaS Dashboard", "Pricing Grid", "Dark Mode"],
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1573166364524-d9dbfd8bbf83?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: 'corp-2',
@@ -78,7 +75,7 @@ const TEMPLATES = [
     icon: <Laptop className="w-5 h-5" />,
     description: "Coloré et audacieux pour agences de marketing et design.",
     features: ["Showreel Vidéo", "Awards", "Clients Logos"],
-    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
   },
 
   // --- E-COMMERCE (5 Modèles) ---
@@ -230,7 +227,7 @@ const TEMPLATES = [
     icon: <Stethoscope className="w-5 h-5" />,
     description: "Propre et rassurant pour cliniques généralistes.",
     features: ["Prise RDV", "Staff Médical", "Urgences"],
-    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1613919113166-737594959cc0?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: 'health-2',
@@ -398,7 +395,7 @@ const TEMPLATES = [
     icon: <GraduationCap className="w-5 h-5" />,
     description: "International pour centres de langues.",
     features: ["Test Niveau", "Séjours", "Tarifs"],
-    image: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: 'edu-5',
@@ -517,7 +514,7 @@ const TEMPLATES = [
     icon: <Camera className="w-5 h-5" />,
     description: "Photographe freelance.",
     features: ["Galerie Fullscreen", "Prints", "Contact"],
-    image: "https://images.unsplash.com/photo-1452587925048-ef4f9d0c9434?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: 'port-2',

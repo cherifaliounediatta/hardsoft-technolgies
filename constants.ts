@@ -1,5 +1,5 @@
 
-import { CompanyInfo, Service, Project, PricingPack, ProposalData } from './types';
+import { CompanyInfo, Service, Project, PricingPack, ProposalData, BlogPost } from './types';
 
 export const COMPANY: CompanyInfo = {
   name: "HardSoft Technologies",
@@ -103,6 +103,51 @@ export const PROJECTS: Project[] = [
       'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200'
     ],
     tags: ['Santé', 'Prise de RDV', 'UX/UI', 'Clinique']
+  }
+];
+
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 'blog-1',
+    title: "L'Intelligence Artificielle au service des PME Sénégalaises",
+    excerpt: "Découvrez comment l'IA peut transformer votre gestion quotidienne et booster votre relation client sans exploser votre budget.",
+    content: "L'intelligence artificielle n'est plus réservée aux géants de la Silicon Valley. À Dakar, de nombreuses PME commencent à intégrer des outils d'IA pour automatiser leurs tâches répétitives...\n\n### 1. Les Chatbots intelligents\nUn client qui pose une question à 2h du matin sur WhatsApp mérite une réponse. L'IA permet aujourd'hui d'offrir un support 24/7 en langue locale...\n\n### 2. Analyse de données\nComprendre les pics de vente lors de la Tabaski ou du Magal grâce à l'analyse prédictive permet d'optimiser vos stocks.",
+    author: "Cherif Alioune Diatta",
+    authorRole: "CEO @ HardSoft",
+    authorImage: "https://images.unsplash.com/photo-1507152832244-10d45c7eda57?auto=format&fit=crop&q=80&w=200",
+    date: "12 Déc. 2025",
+    category: "IA & Futur",
+    imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+    readTime: "5 min",
+    tags: ["IA", "Sénégal", "Innovation"]
+  },
+  {
+    id: 'blog-2',
+    title: "Pourquoi votre entreprise a besoin d'un site web en 2026 ?",
+    excerpt: "La visibilité locale sur Google est devenue le premier levier de croissance à Dakar. Ne laissez pas vos concurrents prendre toute la place.",
+    content: "En 2026, si votre entreprise n'est pas sur Google, elle n'existe pas pour 80% des consommateurs urbains au Sénégal. La recherche locale a explosé...\n\n### La confiance avant tout\nUn site web pro rassure vos partenaires internationaux et vos clients locaux. C'est votre carte de visite 2.0.",
+    author: "Aminata Sow",
+    authorRole: "Marketing Digital",
+    authorImage: "https://images.unsplash.com/photo-1531123897727-8f129e16fd3c?auto=format&fit=crop&q=80&w=200",
+    date: "10 Déc. 2025",
+    category: "Business",
+    imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+    readTime: "4 min",
+    tags: ["Web", "SEO", "Croissance"]
+  },
+  {
+    id: 'blog-3',
+    title: "Sécuriser son infrastructure réseau : Guide complet",
+    excerpt: "Les cyberattaques ne visent pas que les banques. Protégez vos données d'entreprise dès aujourd'hui.",
+    content: "La cybersécurité est un enjeu majeur. Avec la montée du télétravail et des outils cloud, les vulnérabilités se multiplient...\n\n### Le pare-feu n'est qu'un début\nUne sécurité robuste passe par une formation des employés et une infrastructure physique bien pensée.",
+    author: "Aïssatou Ndiaye",
+    authorRole: "CTO",
+    authorImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200",
+    date: "05 Déc. 2025",
+    category: "Infrastructure",
+    imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=800",
+    readTime: "7 min",
+    tags: ["Sécurité", "Réseau", "IT"]
   }
 ];
 

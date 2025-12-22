@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -18,16 +18,54 @@ import About from './components/About';
 import ServicesPage from './components/ServicesPage';
 import Partners from './components/Partners';
 import ClientSearch from './components/ClientSearch';
+import Blog from './components/Blog';
+import BlogPostView from './components/BlogPostView';
+import AdminLogin from './components/AdminLogin';
+import AdminDashboard from './components/AdminDashboard';
+import { BLOG_POSTS, PROJECTS } from './constants';
+import { BlogPost, Project } from './types';
 
-// Define the available views
-export type ViewState = 'home' | 'proposal' | 'quote' | 'support' | 'templates' | 'services' | 'clients';
+export type ViewState = 'home' | 'proposal' | 'quote' | 'support' | 'templates' | 'services' | 'clients' | 'blog' | 'blog-post' | 'admin-login' | 'admin-dashboard';
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<ViewState>('home');
+  const [selectedPostId, setSelectedPostId] = useState<string | null>(null);
+  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
+  
+  // Data State managed by Admin
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>(BLOG_POSTS);
+  const [projects, setProjects] = useState<Project[]>(PROJECTS);
 
-  const navigateTo = (view: ViewState) => {
-    setCurrentView(view);
+  useEffect(() => {
+    const authStatus = localStorage.getItem('hs_admin_auth');
+    if (authStatus === 'true') {
+      setIsAdminAuthenticated(true);
+    }
+  }, []);
+
+  const navigateTo = (view: ViewState, extra?: string) => {
+    if ((view === 'admin-dashboard') && !isAdminAuthenticated) {
+      setCurrentView('admin-login');
+    } else {
+      setCurrentView(view);
+    }
+    
+    if (view === 'blog-post' && extra) {
+      setSelectedPostId(extra);
+    }
     window.scrollTo(0, 0);
+  };
+
+  const handleLoginSuccess = () => {
+    setIsAdminAuthenticated(true);
+    localStorage.setItem('hs_admin_auth', 'true');
+    setCurrentView('admin-dashboard');
+  };
+
+  const handleLogout = () => {
+    setIsAdminAuthenticated(false);
+    localStorage.removeItem('hs_admin_auth');
+    setCurrentView('home');
   };
 
   const renderContent = () => {
@@ -44,6 +82,22 @@ const App: React.FC = () => {
         return <ServicesPage navigateTo={navigateTo} />;
       case 'clients':
         return <ClientSearch />;
+      case 'blog':
+        return <Blog posts={blogPosts} navigateTo={navigateTo} />;
+      case 'blog-post':
+        return <BlogPostView posts={blogPosts} postId={selectedPostId} navigateTo={navigateTo} />;
+      case 'admin-login':
+        return <AdminLogin onLoginSuccess={handleLoginSuccess} navigateTo={navigateTo} />;
+      case 'admin-dashboard':
+        return (
+          <AdminDashboard 
+            blogPosts={blogPosts} 
+            setBlogPosts={setBlogPosts}
+            projects={projects}
+            setProjects={setProjects}
+            onLogout={handleLogout} 
+          />
+        );
       case 'home':
       default:
         return (
@@ -53,7 +107,7 @@ const App: React.FC = () => {
             <About />
             <Services />
             <Partners />
-            <Portfolio navigateTo={navigateTo} />
+            <Portfolio projects={projects} setProjects={setProjects} navigateTo={navigateTo} />
             <Pricing navigateTo={navigateTo} />
             <Contact />
           </>
@@ -61,18 +115,19 @@ const App: React.FC = () => {
     }
   };
 
+  const isAdminView = currentView.startsWith('admin-');
+
   return (
     <div className="min-h-screen flex flex-col font-sans">
-      <Navbar currentView={currentView} navigateTo={navigateTo} />
+      {!isAdminView && <Navbar currentView={currentView} navigateTo={navigateTo} />}
       
       <main className="flex-grow">
         {renderContent()}
       </main>
 
-      {/* Only show standard footer if not in proposal view */}
-      {currentView !== 'proposal' && <Footer navigateTo={navigateTo} />}
-      <WhatsAppButton />
-      {currentView !== 'proposal' && <BackToTop />}
+      {!isAdminView && currentView !== 'proposal' && <Footer navigateTo={navigateTo} />}
+      {!isAdminView && <WhatsAppButton />}
+      {!isAdminView && currentView !== 'proposal' && <BackToTop />}
     </div>
   );
 };

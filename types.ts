@@ -1,3 +1,4 @@
+
 export interface CompanyInfo {
   name: string;
   address: string;
@@ -31,6 +32,21 @@ export interface Project {
   tags?: string[];
 }
 
+export interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  authorRole: string;
+  authorImage: string;
+  date: string;
+  category: string;
+  imageUrl: string;
+  readTime: string;
+  tags: string[];
+}
+
 export interface PricingPack {
   name: string;
   price: string;
@@ -51,3 +67,5 @@ export interface ProposalData {
   sitemap: string[];
   timeline: { week: string; tasks: string[] }[];
 }
+
+export type AdminSection = 'overview' | 'blog' | 'projects' | 'services' | 'settings';

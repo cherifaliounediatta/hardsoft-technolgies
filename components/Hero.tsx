@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ViewState } from '../App';
 import { ArrowRight, Sparkles } from 'lucide-react';
@@ -82,7 +83,7 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
             </div>
           </div>
 
-          {/* Right Image */}
+          {/* Right Image - Focused on a Black Professional */}
           <div className="relative lg:h-[600px] w-full flex items-center justify-center perspective-1000 mt-12 lg:mt-0">
              {/* Glow effect */}
              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-indigo-500/20 blur-[100px] rounded-full pointer-events-none"></div>
@@ -94,8 +95,8 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
                 {/* Main Image Container */}
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-700/50 bg-slate-900 h-full w-full">
                   <img 
-                    src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1000" 
-                    alt="Développement informatique et solutions digitales"
+                    src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=1000" 
+                    alt="Expert en développement informatique et digital au Sénégal"
                     className="w-full h-full object-cover object-center opacity-90 hover:opacity-100 transition-opacity duration-500"
                   />
                   {/* Overlay Gradient */}
@@ -107,8 +108,8 @@ const Hero: React.FC<HeroProps> = ({ navigateTo }) => {
                         <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
                      </div>
                      <div>
-                        <p className="text-sm font-bold text-white">Performance Optimale</p>
-                        <p className="text-xs text-slate-300">Monitoring temps réel actif</p>
+                        <p className="text-sm font-bold text-white">Expertise Locale</p>
+                        <p className="text-xs text-slate-300">Basé à Dakar, Sénégal</p>
                      </div>
                   </div>
                 </div>
